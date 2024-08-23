@@ -1,0 +1,30 @@
+.signup{
+    width:100%;
+    height:100vh;
+    overflow-x: hidden;
+}
+.head {
+    border: none;
+    font-size: 100px; 
+    color: rgba(255,0,0, 0.87);
+    font-weight: 500;
+    opacity:0.8;
+ } 
+ .column{
+    height: 100vh;
+ }
+
+ input {
+    border: 1px solid #000; /* 2px wide solid black border */
+    padding: 8px; /* Adds some padding inside the input */
+    border-radius: 4px; /* Rounds the corners slightly */
+}
+.btn-signup{
+    background-color: rgba(255,0,0,0.87);
+    color: white;
+    outline: none;
+    border: none;
+}
+.input-signup{
+    outline: none;
+}
