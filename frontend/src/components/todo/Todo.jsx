@@ -31,7 +31,7 @@ const Todo = () => {
     } else {
       if (id) {
         try {
-          const response = await axios.post(`http://localhost:1000/api/v2/addTask`, {
+          const response = await axios.post(`${window.location.origin}/api/v2/addTask`, {
             title: inputs.title,
             body: inputs.body,
             id: id,
@@ -53,7 +53,7 @@ const Todo = () => {
   const del = async (cardId) => {
     if (id) {
       try {
-        await axios.delete(`http://localhost:1000/api/v2/deleteTask/${cardId}`, {
+        await axios.delete(`${window.location.origin}/api/v2/deleteTask/${cardId}`, {
           data: { id: id },
         });
         toast.success("Your Task Is Deleted");
@@ -78,7 +78,7 @@ const Todo = () => {
 
   const fetchTasks = async () => {
     try {
-      const response = await axios.get(`http://localhost:1000/api/v2/getTasks/${id}`);
+      const response = await axios.get(`${window.location.origin}/api/v2/getTasks/${id}`);
       setArray(response.data.list);
     } catch (error) {
       toast.error("Failed to fetch tasks. Please try again.");

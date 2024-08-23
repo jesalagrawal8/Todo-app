@@ -30,7 +30,7 @@ const Update = ({ display, task, onUpdateSuccess }) => {
 
     try {
       const response = await axios.put(
-        `http://localhost:1000/api/v2/updateTask/${task._id}`,
+        `${window.location.origin}/api/v2/updateTask/${task._id}`,
         inputs
       );
       toast.success(response.data.message);

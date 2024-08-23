@@ -23,7 +23,7 @@ const Signin = () => {
    const submit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("http://localhost:1000/api/v1/signin", Inputs);
+      const response = await axios.post(`${window.location.origin}/api/v1/signin`, Inputs);
       sessionStorage.setItem("id", response.data.others._id);
       dispatch(authActions.login());
       history("/todo");
